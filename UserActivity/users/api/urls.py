@@ -1,4 +1,4 @@
-"""UserActivity URL Configuration
+"""ToDoList URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -15,9 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from .views import (
+    UserListSerializerAPIView,
+    UserSerializerAPIView,
+    UsrActivitySerializerAPIView,
+    UsrActivityListSerializerAPIView,
+    UserAPIView,
+)
+# from .views import 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('users.urls')),
-    path('api/users/', include('users.api.urls')),
+    # UserSerializerAPIView
+    path('userlistserializers/', UserListSerializerAPIView.as_view()),
+    path('userserializers/', UserSerializerAPIView.as_view()),
+    path('usractivitylistserializers/', UsrActivityListSerializerAPIView.as_view()),
+    path('usractivityserializers/', UsrActivitySerializerAPIView.as_view()),
 ]

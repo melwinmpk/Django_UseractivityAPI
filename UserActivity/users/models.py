@@ -4,7 +4,7 @@ from django.db import models
 '''
     User
     -> id (Primary)
-    -> real_name (foreignkey)
+    -> real_name 
     -> tz
 
     ActivityPeriod
@@ -14,7 +14,7 @@ from django.db import models
 
 '''
 
-class User(models.Model):
+class Userdata(models.Model):
     id   = models.AutoField(auto_created=True, primary_key=True,
                           serialize=False, null=False, default=None)
     real_name = models.CharField(max_length=100, blank=True, null=True)
@@ -22,7 +22,9 @@ class User(models.Model):
 
 
 class ActivityPeriod(models.Model):
+    id = models.AutoField(auto_created=True, primary_key=True,
+                          serialize=False, null=False, default=None)
     userid = models.ForeignKey(
-        User, on_delete=models.CASCADE, default=None)
+        Userdata, on_delete=models.CASCADE, default=None)
     start_time = models.CharField(max_length=300, blank=True, null=True)
-    end_time = models.IntegerField(blank=False, null=False, default=0)
+    end_time = models.CharField(max_length=300, blank=True, null=True)

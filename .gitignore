@@ -9,3 +9,4 @@ tcl
 LICENSE.txt
 db.sqlite3
 UserActivity\UserActivity\__pycache__
+UserActivity\db.sqlite3
