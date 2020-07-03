@@ -1,0 +1,11 @@
+/*.project
+/*.pydevproject
+*.vscode/
+__pycache__
+Include
+Lib
+Scripts
+tcl
+LICENSE.txt
+db.sqlite3
+UserActivity\UserActivity\__pycache__
