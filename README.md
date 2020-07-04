@@ -39,7 +39,7 @@
                     </pre>    
                 </li>
             </ul>
-            <h3>Task Create and Listing of the User (Creation Post method and listing Get Method)</h3>
+            <h3>User Create and Listing  (Creation Post method and listing Get Method)</h3>
             <ul>
                 <li>EndPoint:<span class="remoteURL">https://useractivity-restapi.herokuapp.com/</span><span>api/users/userlistserializers</span></li>
                 <li><span>Data that needed to be passed for Task Creation </span>
@@ -51,16 +51,16 @@
                     </pre>
                 </li>
             </ul>    
-            <h3>Task Delete and Update (Deletion Delete method and Update Put Method)</h3>
+            <h3>User Delete and Update (Deletion Delete method and Update Put Method)</h3>
             <ul>
                 <li>EndPoint:<span class="remoteURL">https://useractivity-restapi.herokuapp.com/</span><span>api/users/userserializers</span></li>
                 <li><span>Data that needed to be passed for User Update for User Delete only id is enough</span>
                     <pre>
-                        {
-							"id":"99",
-							"real_name": "Tom",
-							"tz": "America/Los_Angeles"
-						}
+			{
+				"id":"99",
+				"real_name": "Tom",
+				"tz": "America/Los_Angeles"
+			}
                     </pre>
                 </li>
             </ul>
@@ -72,10 +72,10 @@
                 <li><span>Data that needed to be passed </span>
                     <pre>
                         {
-							"userid": "90",
-							"start_time": "Feb 3 2020  1:33PM",
-							"end_time": "Feb 3 2020 1:54PM"
-						}
+				"userid": "90",
+				"start_time": "Feb 3 2020  1:33PM",
+				"end_time": "Feb 3 2020 1:54PM"
+			}
                     </pre>    
                 </li>
             </ul>
