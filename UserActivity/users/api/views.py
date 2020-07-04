@@ -102,4 +102,4 @@ class UserpopulateAPIView(APIView):
         for _ in range(10):
             usractivity = ActivityPeriodFactory()
             usractivity.save()
-        return HttpResponse("Dummy Creation !!!.")
+        return HttpResponse("Dummy Creation 10 Users at time !!!.")
