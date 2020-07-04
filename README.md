@@ -24,7 +24,13 @@
 		<li>Just run the link 10 Users will be popluated it to the DataBase along with the Activity Period</li>
         <li>https://useractivity-restapi.herokuapp.com/api/users/populateuser/</li>       
     </ul>
-	
+<h3>Note<h3>
+	<div>
+		<ul>
+			<li>Python Scripts are developed for the API ENDPOINTS</li>	
+			<li>https://github.com/melwinmpk/Django_UseractivityAPI/tree/master/PythonScripts</li>
+		<ul>
+	</div>	
 <h2>API ENDPOINTS</h2>
         <div class="endpoints_div">
             <h3>User</h3>
