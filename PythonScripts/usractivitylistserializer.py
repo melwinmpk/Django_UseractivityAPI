@@ -18,7 +18,7 @@ post_headers = {
     "Content-Type": "application/json",
 }
 user_data = {
-    "userid": "1",
+    "userid": "90",
     "start_time": "Feb 3 2020  1:33PM",
 	"end_time": "Feb 3 2020 1:54PM"
 }
@@ -28,7 +28,7 @@ post_method = requests.post(
 print(post_method.json())
 
 user_data = {
-    "userid": "1",
+    "userid": "90",
 }    
 get_method = requests.get(
     AUTH_ENDPOINT, data=json.dumps(user_data), headers=post_headers)

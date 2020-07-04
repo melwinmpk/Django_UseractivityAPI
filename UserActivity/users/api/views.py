@@ -5,20 +5,22 @@ from django.shortcuts import get_object_or_404
 from rest_framework import generics, permissions
 from users.models import Userdata, ActivityPeriod
 from .serializers import UserSerializer, UsrActivitySerializer
+from .popdummydata import UserdataFactory, ActivityPeriodFactory
 import json
+from django.http import HttpResponse
 
 
 class UserListSerializerAPIView(mixins.CreateModelMixin,
                             generics.ListAPIView):
     serializer_class = UserSerializer
-
+    # queryset = Userdata.objects.all()
     def get_queryset(self):
         request = self.request
-        qs = Userdata.objects.filter(
-            user=self.request.id)
         query = request.GET.get('q')
         if query is not None:
             qs = qs.filter(content__icontains=query)
+        else:
+            qs = Userdata.objects.all()
         return qs
 
     def post(self, request, *args, **kwargs):
@@ -38,8 +40,8 @@ class UserSerializerAPIView(mixins.DestroyModelMixin,
 
     def get_object(self, *args, **kwargs):  # slug method for handeling the
         kwargs = self.kwargs
-        kw_id = self.request.data.get('id')
-        qs = Userdata.objects.get(id=kw_id)
+        kw_id = self.request.GET.get('id')
+        qs = get_object_or_404(Userdata, id =kw_id)    
         return qs
 
     def put(self, request, *args, **kwargs):
@@ -79,8 +81,8 @@ class UsrActivitySerializerAPIView(mixins.DestroyModelMixin,
 
     def get_object(self, *args, **kwargs):  # slug method for handeling the
         kwargs = self.kwargs
-        kw_id = self.request.data.get('id')
-        qs = ActivityPeriod.objects.get(id=kw_id)
+        kw_id = self.request.GET.get('id')
+        qs = get_object_or_404(ActivityPeriod, id=kw_id)
         return qs
 
     def put(self, request, *args, **kwargs):
@@ -91,5 +93,10 @@ class UsrActivitySerializerAPIView(mixins.DestroyModelMixin,
     
 
 
-class UserAPIView(APIView):
-    pass
+class UserpopulateAPIView(APIView):
+
+    def get(self, request, format=None):
+        for _ in range(10):
+            usractivity = ActivityPeriodFactory()
+            usractivity.save()
+        return HttpResponse("Dummy Creation !!!.")

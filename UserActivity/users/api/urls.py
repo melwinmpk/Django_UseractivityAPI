@@ -20,7 +20,7 @@ from .views import (
     UserSerializerAPIView,
     UsrActivitySerializerAPIView,
     UsrActivityListSerializerAPIView,
-    UserAPIView,
+    UserpopulateAPIView,
 )
 # from .views import 
 urlpatterns = [
@@ -29,4 +29,5 @@ urlpatterns = [
     path('userserializers/', UserSerializerAPIView.as_view()),
     path('usractivitylistserializers/', UsrActivityListSerializerAPIView.as_view()),
     path('usractivityserializers/', UsrActivitySerializerAPIView.as_view()),
+    path('populateuser/', UserpopulateAPIView.as_view()),
 ]
