@@ -3,6 +3,7 @@ import json
 
 AUTH_ENDPOINT = "http://127.0.0.1:8000/api/users/userlistserializers/"
 '''
+http://127.0.0.1:8000/api/users/populateuser/
     User
     -> id (Primary)
     -> real_name (foreignkey)
@@ -22,9 +23,9 @@ user_data = {
     "tz": "America/Los_Angeles"
 }
 
-# post_method = requests.post(
-#     AUTH_ENDPOINT, data=json.dumps(user_data), headers=post_headers)
-# print(post_method.json())
+post_method = requests.post(
+    AUTH_ENDPOINT, data=json.dumps(user_data), headers=post_headers)
+print(post_method.json())
 user_data = {
     "id": "1"
 }

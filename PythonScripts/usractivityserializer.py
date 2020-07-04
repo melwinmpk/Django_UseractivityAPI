@@ -18,8 +18,8 @@ headers = {
     "Content-Type": "application/json",
 }
 user_data = {
-    "id": "1",
-    "userid": "1",
+    "id": "101",
+    "userid": "90",
     "start_time": "Feb 15 2020  1:33PM",
 	"end_time": "Feb 15 2020 1:54PM"
 }
@@ -31,7 +31,7 @@ print(post_method.json())
 
 
 user_data = {
-    "id": "6"
+    "id": "101"
 }
 
 delete_method = requests.delete(

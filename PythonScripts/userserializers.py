@@ -22,7 +22,7 @@ headers = {
 AUTH_ENDPOINT = "http://127.0.0.1:8000/api/users/userserializers/"
 
 user_data = {
-    "id":"8",
+    "id":"99",
     "real_name": "TC0212345678",
     "tz": "America/Los_Angeles"
 }
@@ -33,7 +33,7 @@ print(put_method.json())
 
 
 user_data = {
-    "id": "8",
+    "id": "99",
     "real_name": "TC0212345678",
     "tz": "America/Los_Angeles"
 }

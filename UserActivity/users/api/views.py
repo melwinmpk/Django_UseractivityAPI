@@ -40,8 +40,11 @@ class UserSerializerAPIView(mixins.DestroyModelMixin,
 
     def get_object(self, *args, **kwargs):  # slug method for handeling the
         kwargs = self.kwargs
-        kw_id = self.request.GET.get('id')
-        qs = get_object_or_404(Userdata, id =kw_id)    
+        if self.request.GET.get('id') is None:
+            id = self.request.data.get('id')
+        else:
+            id = self.request.GET.get('id')
+        qs = get_object_or_404(Userdata, id = id)    
         return qs
 
     def put(self, request, *args, **kwargs):
@@ -81,7 +84,7 @@ class UsrActivitySerializerAPIView(mixins.DestroyModelMixin,
 
     def get_object(self, *args, **kwargs):  # slug method for handeling the
         kwargs = self.kwargs
-        kw_id = self.request.GET.get('id')
+        kw_id = self.request.data.get('id')
         qs = get_object_or_404(ActivityPeriod, id=kw_id)
         return qs
 
