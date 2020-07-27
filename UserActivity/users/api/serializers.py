@@ -55,24 +55,4 @@ class UserSerializer(serializers.ModelSerializer,
         return list_result
 
 
-######################################
-class UserdataFactory(factory.django.DjangoModelFactory):
-    class Meta:
-        model = Userdata
 
-    real_name = factory.Faker('first_name')
-    tz = 'tz'
-    #factory.Faker('first_name')
-
-
-class ActivityPeriodFactory(factory.django.DjangoModelFactory):
-    class Meta:
-        model = ActivityPeriod
-    # id = factory.Faker('id')
-    userid = factory.SubFactory(UserdataFactory)
-    # 2020-07-04 08: 19: 34.261290
-    start_time = "2020-07-04 08: 19: 34.261290"
-    end_time = "2020-07-04 10: 19: 34.261290"
-    # start_time = factory.Faker(str(datetime.datetime.now()))
-    # end_time = factory.Faker(str(datetime.datetime.now()))
-######################################
