@@ -1,4 +1,4 @@
-"# Django_UseractivityAPI" 
+<h1> Django_UseractivityAPI </h1> 
 <div>
 <p>Useractivity is an API for the platform where Admin can keep a track of the daily basis user activity.
 </p>
@@ -24,7 +24,13 @@
 		<li>Just run the link 10 Users will be popluated it to the DataBase along with the Activity Period</li>
         <li>https://useractivity-restapi.herokuapp.com/api/users/populateuser/</li>       
     </ul>
-	
+<h3>Note<h3>
+	<div>
+		<ul>
+			<li>Python Scripts are developed for the API ENDPOINTS</li>	
+			<li>https://github.com/melwinmpk/Django_UseractivityAPI/tree/master/PythonScripts</li>
+		<ul>
+	</div>	
 <h2>API ENDPOINTS</h2>
         <div class="endpoints_div">
             <h3>User</h3>
@@ -39,7 +45,7 @@
                     </pre>    
                 </li>
             </ul>
-            <h3>Task Create and Listing of the User (Creation Post method and listing Get Method)</h3>
+            <h3>User Create and Listing  (Creation Post method and listing Get Method)</h3>
             <ul>
                 <li>EndPoint:<span class="remoteURL">https://useractivity-restapi.herokuapp.com/</span><span>api/users/userlistserializers</span></li>
                 <li><span>Data that needed to be passed for Task Creation </span>
@@ -51,16 +57,16 @@
                     </pre>
                 </li>
             </ul>    
-            <h3>Task Delete and Update (Deletion Delete method and Update Put Method)</h3>
+            <h3>User Delete and Update (Deletion Delete method and Update Put Method)</h3>
             <ul>
                 <li>EndPoint:<span class="remoteURL">https://useractivity-restapi.herokuapp.com/</span><span>api/users/userserializers</span></li>
                 <li><span>Data that needed to be passed for User Update for User Delete only id is enough</span>
                     <pre>
-                        {
-							"id":"99",
-							"real_name": "Tom",
-							"tz": "America/Los_Angeles"
-						}
+			{
+				"id":"99",
+				"real_name": "Tom",
+				"tz": "America/Los_Angeles"
+			}
                     </pre>
                 </li>
             </ul>
@@ -72,10 +78,10 @@
                 <li><span>Data that needed to be passed </span>
                     <pre>
                         {
-							"userid": "90",
-							"start_time": "Feb 3 2020  1:33PM",
-							"end_time": "Feb 3 2020 1:54PM"
-						}
+				"userid": "90",
+				"start_time": "Feb 3 2020  1:33PM",
+				"end_time": "Feb 3 2020 1:54PM"
+			}
                     </pre>    
                 </li>
             </ul>
